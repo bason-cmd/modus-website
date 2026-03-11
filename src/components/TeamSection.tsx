@@ -37,7 +37,7 @@ export default function TeamSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-4 md:py-6">
+    <section ref={sectionRef} id="team" className="py-4 md:py-6">
       <div className="container">
         <div
           ref={blockRef}

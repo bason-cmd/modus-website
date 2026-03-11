@@ -89,7 +89,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-14 md:py-20">
+    <section ref={sectionRef} id="testimonials" className="py-14 md:py-20">
       {/* Belief statement */}
       <div className="container mb-12 md:mb-16">
         <p

@@ -13,12 +13,14 @@ import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
+import BackgroundColorShift from "@/components/BackgroundColorShift";
 
 export default function Home() {
   return (
     <>
       <SmoothScroll />
       <CustomCursor />
+      <BackgroundColorShift />
       <Header />
       <main>
         <Hero />
