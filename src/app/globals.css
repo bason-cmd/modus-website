@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --accent: #E3FF00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Restore default cursor on mobile */
+@media (max-width: 768px) {
+  body { cursor: auto; }
+}
+
+/* Hide native cursor on interactive elements (desktop) */
+@media (min-width: 769px) {
+  a, button, [role="button"], .portfolio-card, .hero-card, .service-item {
+    cursor: none;
+  }
+}
+
+/* Hide scrollbar globally */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Logo slider marquee ─── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Portfolio card hover ─── */
+.portfolio-card .portfolio-image {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portfolio-card:hover .portfolio-image {
+  transform: scale(1.05);
+}
+
+/* ─── Button hover fill ─── */
+.btn-outline {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  z-index: -1;
+}
+
+.btn-outline:hover::before {
+  transform: translateY(0);
+}
+
+.btn-outline:hover {
+  color: #fff;
+}
+
+/* ─── CTA banner ─── */
+.cta-banner {
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-banner.visible {
+  transform: translateY(0);
+}
+
+/* ─── Testimonial slide ─── */
+.testimonial-slide {
+  border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+.testimonial-slide:first-child {
+  border-left: none;
+}
+
+/* ─── Hero card hover ─── */
+.hero-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ─── Service dot ─── */
+.service-item:hover .service-dot {
+  opacity: 1;
+}
+
+/* ─── Link underline effect ─── */
+.link-hover {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.link-hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ─── Selection color ─── */
+::selection {
+  background: var(--accent);
+  color: #000;
+}
