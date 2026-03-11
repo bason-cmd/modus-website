@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 
 const words = ["strategy", "media", "analytics", "creative", "growth", "culture"];
@@ -10,13 +10,12 @@ export default function Hero() {
   const [isAnimating, setIsAnimating] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
   const line1Ref = useRef<HTMLParagraphElement>(null);
-  const line2Ref = useRef<HTMLParagraphElement>(null);
-  const line3Ref = useRef<HTMLDivElement>(null);
+  const line2Ref = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
   const claimRef = useRef<HTMLParagraphElement>(null);
   const hasAnimated = useRef(false);
 
-  // GSAP entrance animation — SplitText-style word reveal
+  // GSAP entrance animation
   useEffect(() => {
     if (hasAnimated.current) return;
     hasAnimated.current = true;
@@ -24,7 +23,7 @@ export default function Hero() {
     const tl = gsap.timeline({ delay: 0.3 });
 
     // Set initial state
-    gsap.set([line1Ref.current, line2Ref.current, line3Ref.current], {
+    gsap.set([line1Ref.current, line2Ref.current], {
       y: "110%",
     });
 
@@ -41,29 +40,20 @@ export default function Hero() {
           duration: 1,
           ease: "power4.out",
         },
-        "-=0.8"
-      )
-      .to(
-        line3Ref.current,
-        {
-          y: 0,
-          duration: 1,
-          ease: "power4.out",
-        },
-        "-=0.8"
+        "-=0.7"
       );
 
-    // Cards reveal
+    // Cards reveal — horizontal slide in
     if (cardsRef.current) {
       const cards = cardsRef.current.children;
-      gsap.set(cards, { y: 60, opacity: 0 });
+      gsap.set(cards, { x: 80, opacity: 0 });
       tl.to(
         cards,
         {
-          y: 0,
+          x: 0,
           opacity: 1,
-          duration: 0.8,
-          stagger: 0.04,
+          duration: 0.9,
+          stagger: 0.05,
           ease: "power3.out",
         },
         "-=0.5"
@@ -104,33 +94,23 @@ export default function Hero() {
       className="overflow-hidden min-h-screen flex flex-col justify-end pb-6 md:pb-8 pt-24"
     >
       <div className="mx-5 md:mx-10">
-        {/* Hero text block — stacked like dotsandlines */}
+        {/* Hero text block */}
         <div className="mb-10 md:mb-14">
           {/* Line 1: "modus" */}
           <div className="overflow-hidden">
             <p
               ref={line1Ref}
-              className="text-hero font-extrabold tracking-[-0.04em] leading-[0.85]"
+              className="text-hero font-display font-extrabold tracking-[-0.04em] leading-[0.85]"
             >
               modus
             </p>
           </div>
 
-          {/* Line 2: "and" */}
-          <div className="overflow-hidden">
-            <p
-              ref={line2Ref}
-              className="text-hero font-extrabold tracking-[-0.04em] leading-[0.85]"
-            >
-              and
-            </p>
-          </div>
-
-          {/* Line 3: rotating word */}
+          {/* Line 2: rotating word with accent dot */}
           <div className="overflow-hidden">
             <div
-              ref={line3Ref}
-              className="text-hero font-extrabold tracking-[-0.04em] leading-[0.85]"
+              ref={line2Ref}
+              className="text-hero font-display font-extrabold tracking-[-0.04em] leading-[0.85]"
             >
               <div
                 className={`transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${
@@ -140,6 +120,7 @@ export default function Hero() {
                 }`}
               >
                 {words[currentWordIndex]}
+                <span className="text-accent">.</span>
               </div>
             </div>
           </div>
@@ -151,21 +132,23 @@ export default function Hero() {
           className="flex gap-2 md:gap-3 overflow-x-auto -mx-5 px-5 md:-mx-10 md:px-10 pb-2 scrollbar-hide"
         >
           {[
-            { bg: "bg-[#1a1a2e]", label: "Brand Strategy" },
-            { bg: "bg-[#e77d22]", label: "Social Media" },
-            { bg: "bg-[#7c3aed]", label: "Performance" },
-            { bg: "bg-[#059669]", label: "Analytics" },
-            { bg: "bg-[#e11d48]", label: "Creative" },
-            { bg: "bg-[#2563eb]", label: "Cultural Marketing" },
-            { bg: "bg-[#ca8a04]", label: "Events" },
-            { bg: "bg-[#dc2626]", label: "Growth" },
-            { bg: "bg-[#4f46e5]", label: "Content" },
+            { label: "Brand Strategy" },
+            { label: "Social Media" },
+            { label: "Performance" },
+            { label: "Analytics" },
+            { label: "Creative" },
+            { label: "Cultural Marketing" },
+            { label: "Events" },
+            { label: "Growth" },
+            { label: "Content" },
           ].map((item, i) => (
             <div
               key={i}
-              className={`hero-card flex-none w-[200px] md:w-[260px] aspect-[3/4] rounded-xl ${item.bg} flex items-end p-4`}
+              className="hero-card flex-none w-[200px] md:w-[260px] aspect-[3/4] rounded-xl bg-neutral-900 flex items-end p-4 overflow-hidden relative"
             >
-              <span className="text-white/70 text-[11px] font-medium bg-white/10 backdrop-blur-md rounded-full px-3 py-1">
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
+              <span className="relative z-20 text-white/80 text-[11px] font-medium bg-white/10 backdrop-blur-md rounded-full px-3 py-1">
                 {item.label}
               </span>
             </div>
@@ -176,7 +159,7 @@ export default function Hero() {
         <div className="my-14 md:my-20">
           <p
             ref={claimRef}
-            className="text-claim font-bold leading-[1.1] tracking-[-0.02em] max-w-[900px]"
+            className="text-claim font-display font-bold leading-[1.1] tracking-[-0.02em] max-w-[900px]"
           >
             Creative and digital growth agency rooted in Tel Aviv&apos;s cultural pulse{" "}
             <span className="inline-block w-[50px] md:w-[100px] h-[20px] md:h-[40px] bg-accent rounded-[6px] mx-1 align-middle relative -top-[2px]" />{" "}

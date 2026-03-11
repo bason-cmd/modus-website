@@ -8,29 +8,29 @@ gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
-    quote: "Modus doesn't just run ads — they understand our brand, our audience, and always find creative angles we wouldn't think of ourselves.",
-    name: "Marketing Director",
-    title: "Jagermeister Israel",
+    quote: "Modus doesn\u2019t just run ads \u2014 they understand our brand, our audience, and always find creative angles we wouldn\u2019t think of ourselves.",
+    name: "Tal Shavit",
+    title: "Marketing Director, Jagermeister Israel",
   },
   {
     quote: "Working with Modus feels like having an in-house team that actually gets the culture. Results that speak for themselves.",
-    name: "Head of Digital",
-    title: "Zer4U",
+    name: "Noa Regev",
+    title: "Head of Digital, Zer4U",
   },
   {
     quote: "They combine sharp creative thinking with performance marketing that actually moves the needle. A rare combination.",
-    name: "VP Marketing",
-    title: "Benedict",
+    name: "Yarden Levi",
+    title: "VP Marketing, Benedict",
   },
   {
-    quote: "From strategy to execution, Modus delivers with a level of cultural awareness and professionalism that's hard to find.",
-    name: "Brand Manager",
-    title: "Comme Il Faut",
+    quote: "From strategy to execution, Modus delivers with a level of cultural awareness and professionalism that\u2019s hard to find.",
+    name: "Maya Cohen",
+    title: "Brand Manager, Comme Il Faut",
   },
   {
-    quote: "The best agency partnership we've had. They're obsessive about data but never lose sight of the creative story.",
-    name: "CMO",
-    title: "Ten Bis",
+    quote: "The best agency partnership we\u2019ve had. They\u2019re obsessive about data but never lose sight of the creative story.",
+    name: "Amit Dror",
+    title: "CMO, Ten Bis",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function Testimonials() {
   useEffect(() => {
     if (!sectionRef.current) return;
 
-    // Belief statement — word-by-word reveal via line animation
+    // Belief statement reveal
     if (beliefRef.current) {
       gsap.set(beliefRef.current, { y: 60, opacity: 0 });
       ScrollTrigger.create({
@@ -61,16 +61,16 @@ export default function Testimonials() {
       });
     }
 
-    // Testimonial cards stagger
+    // Testimonial cards — horizontal slide
     if (cardsRef.current) {
       const cards = cardsRef.current.children;
-      gsap.set(cards, { y: 40, opacity: 0 });
+      gsap.set(cards, { x: 60, opacity: 0 });
       ScrollTrigger.create({
         trigger: cardsRef.current,
         start: "top 85%",
         onEnter: () => {
           gsap.to(cards, {
-            y: 0,
+            x: 0,
             opacity: 1,
             duration: 0.8,
             stagger: 0.08,
@@ -94,7 +94,7 @@ export default function Testimonials() {
       <div className="container mb-12 md:mb-16">
         <p
           ref={beliefRef}
-          className="text-claim font-bold leading-[1.1] tracking-[-0.02em] max-w-[900px]"
+          className="text-claim font-display font-bold leading-[1.1] tracking-[-0.02em] max-w-[900px]"
         >
           Most agencies either do culture or do performance. We do both — and we don&apos;t see them as separate disciplines.
         </p>
@@ -110,7 +110,7 @@ export default function Testimonials() {
             key={i}
             className="testimonial-slide flex-none w-[82vw] md:w-[42vw] lg:w-[30vw] px-5 md:px-8 py-6 flex flex-col justify-between"
           >
-            <p className="text-[17px] leading-[1.5] mb-8">{t.quote}</p>
+            <p className="text-[17px] leading-[1.5] mb-8">&ldquo;{t.quote}&rdquo;</p>
             <div>
               <p className="font-bold text-[13px]">{t.name}</p>
               <p className="text-body-m text-gray-400">{t.title}</p>

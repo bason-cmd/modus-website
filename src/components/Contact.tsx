@@ -85,11 +85,11 @@ export default function Contact() {
   return (
     <section ref={sectionRef} id="contact" className="py-16 md:py-24">
       <div className="container">
-        {/* "and you?" heading — like dotsandlines */}
+        {/* "and you?" heading */}
         <div className="overflow-hidden mb-10 md:mb-14">
           <h2
             ref={headingRef}
-            className="text-hero font-extrabold leading-[0.88] tracking-[-0.04em]"
+            className="text-hero font-display font-extrabold leading-[0.88] tracking-[-0.04em]"
           >
             and{" "}
             <span className="italic font-bold" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>
@@ -106,13 +106,13 @@ export default function Contact() {
           <div className="flex flex-col gap-3">
             <a
               href="mailto:hello@modus.co.il"
-              className="text-display-3 font-bold hover:opacity-50 transition-opacity"
+              className="text-display-3 font-display font-bold hover:opacity-50 transition-opacity"
             >
               hello@modus.co.il
             </a>
             <a
               href="tel:+972544000000"
-              className="text-display-3 font-bold hover:opacity-50 transition-opacity"
+              className="text-display-3 font-display font-bold hover:opacity-50 transition-opacity"
             >
               +972-54-400-0000
             </a>
@@ -129,14 +129,14 @@ export default function Contact() {
             <p className="text-body-m text-gray-400 mb-4">
               Rothschild Blvd 45, Tel Aviv-Yafo
             </p>
-            <div className="w-full aspect-[4/3] bg-[#f5f0e8] rounded-xl" />
+            <div className="w-full aspect-[4/3] bg-neutral-100 rounded-xl" />
           </div>
           <div className="flex flex-col">
             <h3 className="text-[15px] font-bold mb-1">New York</h3>
             <p className="text-body-m text-gray-400 mb-4">
               Broadway 220, Suite 8, New York, NY
             </p>
-            <div className="w-full aspect-[4/3] bg-[#e8eaf5] rounded-xl" />
+            <div className="w-full aspect-[4/3] bg-neutral-100 rounded-xl" />
           </div>
         </div>
       </div>

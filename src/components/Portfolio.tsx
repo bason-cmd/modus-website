@@ -7,12 +7,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { title: "TechFlow", category: "SaaS & Technology", color: "bg-[#1a1a2e]" },
-  { title: "GreenLeaf", category: "E-Commerce & DTC", color: "bg-[#059669]" },
-  { title: "Pulse Finance", category: "Fintech & Finance", color: "bg-[#2563eb]" },
-  { title: "Vivid Studio", category: "Creative & Lifestyle", color: "bg-[#7c3aed]" },
-  { title: "Atlas Mobility", category: "Mobility & Transport", color: "bg-[#e77d22]" },
-  { title: "NovaCare", category: "Health & Wellness", color: "bg-[#0891b2]" },
+  { title: "Jagermeister", category: "Cultural Marketing & Events" },
+  { title: "Zer4U", category: "E-Commerce & Performance" },
+  { title: "Ten Bis", category: "Growth & Digital" },
+  { title: "Vans", category: "Brand Strategy & Social" },
+  { title: "Comme Il Faut", category: "Creative & Lifestyle" },
+  { title: "Benedict", category: "Performance & Analytics" },
 ];
 
 export default function Portfolio() {
@@ -76,9 +76,9 @@ export default function Portfolio() {
             >
               <div className="overflow-hidden rounded-lg aspect-[4/3]">
                 <div
-                  className={`portfolio-image w-full h-full ${project.color} flex items-center justify-center`}
+                  className="portfolio-image w-full h-full bg-neutral-100 flex items-center justify-center"
                 >
-                  <span className="text-white/8 text-[80px] font-extrabold">
+                  <span className="text-neutral-300 text-[80px] font-display font-extrabold">
                     {project.title.charAt(0)}
                   </span>
                 </div>

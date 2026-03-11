@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-syne)", "system-ui", "sans-serif"],
       },
       fontSize: {
         "hero": ["clamp(72px, 14vw, 220px)", { lineHeight: "0.88", letterSpacing: "-0.04em", fontWeight: "800" }],

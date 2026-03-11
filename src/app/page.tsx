@@ -10,17 +10,14 @@ import Testimonials from "@/components/Testimonials";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import CTABanner from "@/components/CTABanner";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
-import BackgroundColorShift from "@/components/BackgroundColorShift";
 
 export default function Home() {
   return (
     <>
       <SmoothScroll />
       <CustomCursor />
-      <BackgroundColorShift />
       <Header />
       <main>
         <Hero />
@@ -33,7 +30,6 @@ export default function Home() {
         <Contact />
         <Footer />
       </main>
-      <CTABanner />
     </>
   );
 }

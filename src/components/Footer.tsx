@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {/* Logo */}
           <div>
-            <p className="text-[48px] md:text-[64px] font-extrabold leading-none tracking-[-0.03em]">
+            <p className="text-[48px] md:text-[64px] font-display font-extrabold leading-none tracking-[-0.03em]">
               modus
             </p>
           </div>

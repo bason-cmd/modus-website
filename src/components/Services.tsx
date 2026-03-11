@@ -10,7 +10,6 @@ const services = [
   {
     number: "01",
     title: "strategy",
-    color: "bg-[#1a1a2e]",
     items: [
       "Brand Strategy & Positioning",
       "Creative Platforms & Campaigns",
@@ -23,7 +22,6 @@ const services = [
   {
     number: "02",
     title: "media",
-    color: "bg-[#e77d22]",
     items: [
       "Meta Ads (Facebook & Instagram)",
       "Google Ads (Search & Display)",
@@ -36,7 +34,6 @@ const services = [
   {
     number: "03",
     title: "analytics",
-    color: "bg-[#059669]",
     items: [
       "Marketing BI & Dashboards",
       "Attribution Modeling",
@@ -49,7 +46,6 @@ const services = [
   {
     number: "04",
     title: "creative",
-    color: "bg-[#7c3aed]",
     items: [
       "Ad Creative & Design",
       "Video Production",
@@ -62,7 +58,6 @@ const services = [
   {
     number: "05",
     title: "culture",
-    color: "bg-[#e11d48]",
     items: [
       "Cultural Marketing & Events",
       "Community Activation",
@@ -83,15 +78,15 @@ export default function Services() {
   useEffect(() => {
     if (!sectionRef.current) return;
 
-    // Animate service titles with stagger
-    gsap.set(titleRefs.current.filter(Boolean), { y: 80, opacity: 0 });
+    // Animate service titles — horizontal slide in
+    gsap.set(titleRefs.current.filter(Boolean), { x: -60, opacity: 0 });
 
     ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top 70%",
       onEnter: () => {
         gsap.to(titleRefs.current.filter(Boolean), {
-          y: 0,
+          x: 0,
           opacity: 1,
           duration: 1,
           stagger: 0.08,
@@ -155,14 +150,14 @@ export default function Services() {
                   </span>
                   <div className="flex items-center gap-3">
                     <h3
-                      className={`text-display-3 font-bold transition-opacity duration-300 ${
+                      className={`text-display-3 font-display font-bold transition-opacity duration-300 ${
                         activeIndex === i ? "opacity-100" : "opacity-20"
                       }`}
                     >
                       {service.title}
                     </h3>
                     <div
-                      className={`service-dot w-2.5 h-2.5 md:w-3.5 md:h-3.5 rounded-full bg-black transition-all duration-300 ${
+                      className={`service-dot w-2.5 h-2.5 md:w-3.5 md:h-3.5 rounded-full bg-accent transition-all duration-300 ${
                         activeIndex === i ? "opacity-100 scale-100" : "opacity-0 scale-0"
                       }`}
                     />
@@ -174,16 +169,16 @@ export default function Services() {
 
           {/* Right: Service visual + details */}
           <div ref={rightRef} className="md:w-1/2 flex flex-col gap-6">
-            {/* Color block visual */}
+            {/* Visual block — B&W with accent */}
             <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden">
               {services.map((service, i) => (
                 <div
                   key={i}
-                  className={`absolute inset-0 ${service.color} transition-opacity duration-500 flex items-center justify-center ${
+                  className={`absolute inset-0 bg-neutral-900 transition-opacity duration-500 flex items-center justify-center ${
                     activeIndex === i ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <span className="text-white/10 text-[120px] md:text-[180px] font-extrabold leading-none">
+                  <span className="text-accent/20 text-[120px] md:text-[180px] font-display font-extrabold leading-none">
                     {service.number}
                   </span>
                 </div>
