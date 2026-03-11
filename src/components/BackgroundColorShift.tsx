@@ -6,17 +6,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/**
- * Transitions the page background color as user scrolls through sections.
- * Inspired by dotsandlines.io color array: ["#ffffff", "#E3FF00", "#FF9500", "#F351FF"]
- */
-
 const colorMap: { selector: string; color: string }[] = [
-  { selector: "#services", color: "#E3FF00" },
-  { selector: "#team", color: "#FF9500" },
-  { selector: "#testimonials", color: "#F351FF" },
+  { selector: "#services", color: "#F7F7F7" },
+  { selector: "#team", color: "#ffffff" },
+  { selector: "#testimonials", color: "#F5F5F5" },
   { selector: "#about", color: "#ffffff" },
-  { selector: "#contact", color: "#E3FF00" },
+  { selector: "#contact", color: "#F7F7F7" },
 ];
 
 export default function BackgroundColorShift() {
