@@ -102,7 +102,7 @@ export default function Testimonials() {
 
       {/* Horizontal scroll testimonials */}
       <div
-        ref={(el) => { scrollRef.current = el; cardsRef.current = el; }}
+        ref={cardsRef}
         className="flex overflow-x-auto gap-0 pb-4 scrollbar-hide"
       >
         {testimonials.map((t, i) => (
