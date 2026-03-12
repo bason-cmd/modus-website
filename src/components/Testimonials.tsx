@@ -35,7 +35,7 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+
   const sectionRef = useRef<HTMLElement>(null);
   const beliefRef = useRef<HTMLParagraphElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
