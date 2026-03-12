@@ -1,0 +1,185 @@
+{
+  "hero_cards": [
+    {
+      "image_id": "1OcllDcy-gnUl_PiqtIPbRhIikBfRLSJ_",
+      "file_name": "IMG_4181.jpg",
+      "client": "KOHI",
+      "drive_folder": "studio/KOHI/reels/pics",
+      "section": "hero_card_1",
+      "art_direction_notes": "Five colorful iced drinks on a chair in golden sunlight. Vibrant, lifestyle-forward, immediately eye-catching. The color palette is rich but natural. Strong 'Tel Aviv summer' energy. Works perfectly as a square/portrait card crop — the drinks cluster tightly in the center. This is the 'drinks/lifestyle' lane in the hero quartet.",
+      "crop_guidance": "Crop to portrait or square, centering the five drinks. The chair and sunlight background provide beautiful negative space at top.",
+      "why_picked": "Most visually arresting image in the entire shortlist. Color, light, and composition are all premium editorial quality. Immediately communicates 'creative agency that does food & beverage' without being a product shot."
+    },
+    {
+      "image_id": "1dAKVFxDnnxS69uTtBRvIjxDuLWmQfx-x",
+      "file_name": "KARELA-05866.JPG",
+      "client": "Yu Ag (KARELA)",
+      "drive_folder": "studio/יו אג/footage",
+      "section": "hero_card_2",
+      "art_direction_notes": "Overhead shot of avocado toast on a plate — rich greens, creamy textures, styled beautifully. Classic food photography with editorial lighting. The overhead angle gives it a graphic, almost abstract quality that works well on a dark website.",
+      "crop_guidance": "Square crop centering the plate. The overhead angle is already perfectly composed for a card format.",
+      "why_picked": "Strongest food photography in the set. The overhead angle and styling are distinctly editorial — not stock, not catalog. Represents the 'food' lane in the hero quartet and shows the agency can shoot at a high level."
+    },
+    {
+      "image_id": "1mW0RjgdSYZXv6He1dEJJlkK1r89ugENX",
+      "file_name": "BY Eden Degany.png",
+      "client": "Malka (מלכה)",
+      "drive_folder": "studio/מלכה/יצירה מקומית/הזאבות",
+      "section": "hero_card_3",
+      "art_direction_notes": "Group scene at a long dinner table — baroque, dark, cinematic. Multiple people in a moody, theatrical lighting setup reminiscent of a Dutch Golden Age painting. This is the most 'agency portfolio' image in the set — it screams creative ambition and production value.",
+      "crop_guidance": "Can crop portrait focusing on the central group, or keep wider for more atmosphere. Either way, the dark tones will pop against the black website background with neon accents.",
+      "why_picked": "The single most impressive production image in the shortlist. Communicates 'events / experiential / high-end production' immediately. The dark palette aligns perfectly with the website's black & white aesthetic. This is the 'wow' card."
+    },
+    {
+      "image_id": "1sR9GUT13ohkoN02M3MaMxIKdvvL9GN3a",
+      "file_name": "Zer4U_05-05-25_0238.jpg",
+      "client": "ZER4U",
+      "drive_folder": "studio/ZER4U/פרוייקטים שכבר יצאו/באנר ט״ו באב/באנר טו באב v1",
+      "section": "hero_card_4",
+      "art_direction_notes": "Woman in a red dress holding roses — editorial fashion photography with strong color and confident styling. The red tones will create a powerful warm accent against the black website. This bridges fashion and lifestyle beautifully.",
+      "crop_guidance": "Portrait crop centering on the model and roses. The composition is already strong for a vertical card.",
+      "why_picked": "Best fashion/editorial image in the set. Provides the 'fashion/beauty' lane in the hero quartet. The red dress is a bold color statement that gives the hero section visual variety alongside the green (KARELA), warm golds (KOHI), and dark tones (Malka)."
+    }
+  ],
+  "portfolio": {
+    "jagermeister": {
+      "image_id": null,
+      "file_name": null,
+      "client": "Jagermeister",
+      "section": "portfolio_grid",
+      "art_direction_notes": "No Jagermeister images found in the Drive shortlist. This client needs separate sourcing.",
+      "fallback_suggestion": "Source a hero shot from Jagermeister campaign archives — ideally a nightlife/bar scene with the iconic green bottle and dark, moody lighting to match the site aesthetic."
+    },
+    "zer4u": {
+      "image_id": "1sR9GUT13ohkoN02M3MaMxIKdvvL9GN3a",
+      "file_name": "Zer4U_05-05-25_0238.jpg",
+      "client": "ZER4U",
+      "drive_folder": "studio/ZER4U/פרוייקטים שכבר יצאו/באנר ט״ו באב/באנר טו באב v1",
+      "section": "portfolio_grid",
+      "art_direction_notes": "Same image used in hero — woman in red dress with roses. For the portfolio card, this works because it immediately communicates 'ZER4U = premium floral brand with editorial ambition.' If you want a different crop for portfolio vs hero, see crop_guidance.",
+      "crop_guidance": "For portfolio grid: wider horizontal crop showing more of the scene context. For hero card: tighter portrait crop on the model."
+    },
+    "ten_bis": {
+      "image_id": "15GQ_y3VpgKpBb1hmQQK-oUPlX-SDsoO2",
+      "file_name": "Lifestyle_sRGB_ALL_2023_Food-Trends_Zero-Heroes-Brown-Boxes_EXP-AUG2024.png",
+      "client": "Ten Bis (תן ביס)",
+      "drive_folder": "studio/תן ביס/פרוייקטים שיצאו /סרטוני מילים תן ביס ",
+      "section": "portfolio_grid",
+      "art_direction_notes": "Hand reaching for stacked takeout boxes — the best available Ten Bis image. It is lifestyle-forward with a human element (the hand), not just a product cutout. The brown boxes and warm tones feel contemporary and editorial.",
+      "crop_guidance": "Horizontal crop works naturally. Center on the hand-and-boxes interaction.",
+      "why_picked": "Best of the Ten Bis options — most images were cutouts or catalog-style grocery shots. This one has a lifestyle narrative and human element that elevates it above the rest."
+    },
+    "vans": {
+      "image_id": null,
+      "file_name": null,
+      "client": "Vans",
+      "section": "portfolio_grid",
+      "art_direction_notes": "No Vans images found in the Drive shortlist. This client needs separate sourcing.",
+      "fallback_suggestion": "Source a hero shot from Vans campaign work — ideally street/skate culture, urban setting, bold composition. The brand's DNA is youth culture and authenticity."
+    },
+    "comme_il_faut": {
+      "image_id": "1c560VEk_AkQdViQkWjP2c0-d_IPkdI9s",
+      "file_name": "Artboard 10.jpg",
+      "client": "Comme Il Faut",
+      "drive_folder": "studio/comme il faut/פרוייקטים שיצאו/keep it surreal/קרוסלה/לא לשימוש",
+      "section": "portfolio_grid",
+      "art_direction_notes": "Woman in denim suit with MacBook — editorial fashion-meets-business shot with flanking figures cropped at edges creating a triptych-like composition. The styling is confident and modern. This is an excellent representation of the Comme Il Faut brand — professional women's fashion with editorial polish.",
+      "crop_guidance": "Use the full horizontal composition — the flanking figures add dynamism. Works well as a wide portfolio card.",
+      "why_picked": "Strongest CIF image by far. The others were textures, solo shots, or less impactful. This one has composition, styling, and brand alignment all working together."
+    },
+    "benedict": {
+      "image_id": "14O4xQX-aAOvcKPfm_sy0Nis27lejc1rW",
+      "file_name": "אספרסו מרטיני - קוקטייל - רום, קרמל מטובל, אספרסו, חוואיג׳ מלוח copy.jpg",
+      "client": "Benedict (בנדיקט)",
+      "drive_folder": "studio/בנדיקט/פרוייקטים שיצאו/קרוסלת קוקטיילים/drive-download-20251222T134959Z-1-001",
+      "section": "portfolio_grid",
+      "art_direction_notes": "Espresso Martini on dark background — high contrast, premium feel. The dark cocktail against a moody black/shadow background is perfectly aligned with the website aesthetic. This is Benedict at its most sophisticated.",
+      "crop_guidance": "Square or portrait crop centering the glass. The dark negative space around it is an asset, not a problem — it creates a luxury feel.",
+      "why_picked": "The dark palette makes this the portfolio image most aligned with the website design. Other cocktails (pink Clover Club, orange Garibaldi) were beautiful but their bright colors compete with the website's neon accents. The Espresso Martini is all shadow and amber — it belongs on a black site."
+    }
+  },
+  "team_banner": {
+    "image_id": "1Q2GnscsllJpp5kEGkM-q4ZkS9WTOgdcH",
+    "file_name": "BROKER (6).jpg",
+    "client": "Waxman (וקסמן)",
+    "drive_folder": "studio/וקסמן waxman/מודעות WaxmanShop",
+    "section": "team_banner",
+    "art_direction_notes": "Modern office interior — clean architectural lines, contemporary furniture, professional atmosphere. This is the ideal 'team/about' banner because it communicates 'premium workspace / serious business' without being generic stock. The horizontal composition is naturally cinematic. The neutral tones allow text overlay with either white or the neon accent color.",
+    "crop_guidance": "16:7 or 21:9 panoramic crop. The architecture provides strong horizontal lines that work beautifully at ultra-wide ratios. Ensure sufficient dark area for text overlay.",
+    "why_picked": "The only architectural/workspace image in the shortlist. It contextualizes the team section — this is where the agency works, this is the caliber of clients they serve (premium real estate). The composition is ready-made for a cinematic banner."
+  },
+  "about_banner": {
+    "image_id": "1r23pTUwfyikUqzs7ePoWb8J7S4MDwHX-",
+    "file_name": "shutterstock_1241140417.jpg",
+    "client": "Tel Aviv (עיריית תל אביב)",
+    "drive_folder": "studio/עיריית תל אביב/מקומות להיפרד בהן/תמונות",
+    "section": "about_banner",
+    "art_direction_notes": "Sunset panorama of the Tel Aviv beachfront promenade — warm golden hour light, city skyline, Mediterranean energy. This anchors the agency geographically and emotionally. Tel Aviv IS the brand — a city of creativity, ambition, and energy. The sunset tonality creates a warm counterpoint to the otherwise dark/monochrome website.",
+    "crop_guidance": "21:9 ultra-wide crop focusing on the skyline and promenade. Avoid cropping out the water entirely — the sea is part of the Tel Aviv identity. Add a slight dark gradient overlay from the bottom for text readability.",
+    "why_picked": "The strongest Tel Aviv panorama in the set. The Sarona Park images were too bright/postcard-like. This one has cinematic warmth and the right mix of urban density and natural beauty. It says 'we are a Tel Aviv agency' without being cliche."
+  },
+  "alternates": [
+    {
+      "image_id": "1r4dcSqG0Oewhtfj3llewuYIOwbGJsatq",
+      "file_name": "איסט_ _סייד - קוקטייל - ג'ין_, _עשבי_ _גינה_, _לימון_, _סודה_, _זעתר_ _תפרחת_ _נענע copy.jpg",
+      "client": "Benedict (בנדיקט)",
+      "drive_folder": "studio/בנדיקט/פרוייקטים שיצאו/קרוסלת קוקטיילים/drive-download-20251222T134959Z-1-001",
+      "suggested_for": "hero_card alternate or Benedict portfolio alternate",
+      "notes": "Green cocktail (East Side) with mint — gorgeous color, fresh and vivid. Could replace the Espresso Martini if a brighter, more playful tone is desired for Benedict. Also works as a hero card if more color variety is needed."
+    },
+    {
+      "image_id": "16cu0lPIOrRHmnaOnr57osCZ_FtTjk8cT",
+      "file_name": "comme_il_faut_5_11_25189515.jpg",
+      "client": "Comme Il Faut",
+      "drive_folder": "studio/comme il faut/פרוייקטים שיצאו/keep it surreal/comme_il_faut_winter_25",
+      "suggested_for": "CIF portfolio alternate",
+      "notes": "Older woman with suitcase — strong editorial portrait, confident and elegant. A different angle on CIF's brand — maturity and sophistication vs the younger trio in Artboard 10. Good option if a single-subject composition is preferred."
+    },
+    {
+      "image_id": "1s3j3s0y5LM7SwD74sIzbw2bd_j3QEtee",
+      "file_name": "IMG_9156.jpg",
+      "client": "KOHI",
+      "drive_folder": "studio/KOHI/PHOTOS",
+      "suggested_for": "hero_card alternate or about section",
+      "notes": "KOHI cafe exterior — documentary-style photography showing the storefront with KOHI branding. Works well if a more grounded, 'real-world' image is needed to balance the more styled hero cards."
+    },
+    {
+      "image_id": "1o6iC4I4BZE1l-J7-6q6_JJYZoS59NoFa",
+      "file_name": "DSC06459.jpg",
+      "client": "Solo",
+      "drive_folder": "studio/solo/solo lumen",
+      "suggested_for": "hero_card alternate (craft/artisanal lane)",
+      "notes": "Overhead pottery wheel shot — hands at work, earthy tones, artisanal craft. Provides a 'maker culture' angle if the hero section needs more variety beyond food and fashion."
+    },
+    {
+      "image_id": "1xIdTRkKVLW0I8QTFYOZSwaDoG9KQInCW",
+      "file_name": "KARELA-05908.JPG",
+      "client": "Yu Ag (KARELA)",
+      "drive_folder": "studio/יו אג/footage",
+      "suggested_for": "hero_card alternate or KARELA portfolio alternate",
+      "notes": "Close-up avocado toast with runny egg — stunning food macro photography. More intimate and textural than the overhead KARELA-05866. Could swap in if a tighter, more dramatic food shot is preferred."
+    },
+    {
+      "image_id": "1WgAH6oxK48LlPv43JBBHml0SLmiWAGC1",
+      "file_name": "MATMON 9-5-20.jpg",
+      "client": "Matmon (מטמון)",
+      "drive_folder": "studio/מטמון/night school/footage",
+      "suggested_for": "hero_card alternate or about section",
+      "notes": "Two latte art cups on a warm wooden surface with a hand reaching in — atmospheric cafe photography. Warm, intimate, and authentic. Good alternate for the 'food & beverage' lane if a cozier tone is desired over KOHI's bright summer energy."
+    }
+  ],
+  "metadata": {
+    "total_reviewed": 124,
+    "total_clients": 18,
+    "images_selected": 10,
+    "alternates_provided": 6,
+    "missing_clients": ["Jagermeister", "Vans"],
+    "design_context": "Black & white website with neon accent (#E3FF00), inspired by dotsandlines.io. All selections prioritize dramatic/moody photography with editorial production quality.",
+    "hero_card_diversity": {
+      "card_1_lane": "lifestyle / drinks (KOHI — summer, color, energy)",
+      "card_2_lane": "food / editorial (KARELA — overhead, graphic, textural)",
+      "card_3_lane": "events / production (Malka — baroque, cinematic, theatrical)",
+      "card_4_lane": "fashion / beauty (ZER4U — editorial, bold color, confidence)"
+    }
+  }
+}

@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -88,8 +89,15 @@ export default function About() {
       <div className="overflow-hidden rounded-xl mx-5 md:mx-10 mb-14 md:mb-20">
         <div
           ref={imageRef}
-          className="w-full aspect-[21/9] bg-neutral-900 relative"
+          className="w-full aspect-[21/9] relative"
         >
+          <Image
+            src="/images/banner-about.jpg"
+            alt="Tel Aviv beachfront panorama at sunset"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
         </div>
       </div>

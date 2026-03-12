@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,7 +73,15 @@ export default function TeamSection() {
       <div className="container">
         {/* Full-width image block with overlay */}
         <div className="w-full aspect-[16/7] rounded-xl overflow-hidden relative">
-          <div ref={imageRef} className="absolute inset-0 bg-neutral-900" />
+          <div ref={imageRef} className="absolute inset-0">
+            <Image
+              src="/images/banner-team.jpg"
+              alt="Modus studio workspace"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
           <div className="absolute inset-0 bg-black/40 z-10" />
           <div className="absolute inset-0 z-20 flex items-center justify-center">
             <div className="text-center">

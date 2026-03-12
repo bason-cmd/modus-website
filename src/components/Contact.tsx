@@ -10,7 +10,7 @@ export default function Contact() {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const linksRef = useRef<HTMLDivElement>(null);
-  const locationsRef = useRef<HTMLDivElement>(null);
+  const locationRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -51,19 +51,17 @@ export default function Contact() {
       });
     }
 
-    // Locations
-    if (locationsRef.current) {
-      const cards = locationsRef.current.children;
-      gsap.set(cards, { y: 40, opacity: 0 });
+    // Location
+    if (locationRef.current) {
+      gsap.set(locationRef.current, { y: 40, opacity: 0 });
       ScrollTrigger.create({
-        trigger: locationsRef.current,
+        trigger: locationRef.current,
         start: "top 85%",
         onEnter: () => {
-          gsap.to(cards, {
+          gsap.to(locationRef.current, {
             y: 0,
             opacity: 1,
             duration: 0.8,
-            stagger: 0.15,
             ease: "power3.out",
           });
         },
@@ -75,7 +73,7 @@ export default function Contact() {
       ScrollTrigger.getAll().forEach((st) => {
         if (
           st.trigger === sectionRef.current ||
-          st.trigger === locationsRef.current
+          st.trigger === locationRef.current
         )
           st.kill();
       });
@@ -105,10 +103,10 @@ export default function Contact() {
           </p>
           <div className="flex flex-col gap-3">
             <a
-              href="mailto:hello@modus.co.il"
+              href="mailto:hello@modus.world"
               className="text-display-3 font-display font-bold hover:opacity-50 transition-opacity"
             >
-              hello@modus.co.il
+              hello@modus.world
             </a>
             <a
               href="tel:+972544000000"
@@ -119,25 +117,13 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Locations */}
-        <div
-          ref={locationsRef}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16"
-        >
-          <div className="flex flex-col">
-            <h3 className="text-[15px] font-bold mb-1">Tel Aviv (HQ)</h3>
-            <p className="text-body-m text-gray-400 mb-4">
-              Rothschild Blvd 45, Tel Aviv-Yafo
-            </p>
-            <div className="w-full aspect-[4/3] bg-neutral-100 rounded-xl" />
-          </div>
-          <div className="flex flex-col">
-            <h3 className="text-[15px] font-bold mb-1">New York</h3>
-            <p className="text-body-m text-gray-400 mb-4">
-              Broadway 220, Suite 8, New York, NY
-            </p>
-            <div className="w-full aspect-[4/3] bg-neutral-100 rounded-xl" />
-          </div>
+        {/* Location — Tel Aviv only */}
+        <div ref={locationRef} className="mt-16 max-w-md">
+          <h3 className="text-[15px] font-bold mb-1">Tel Aviv</h3>
+          <p className="text-body-m text-gray-400 mb-4">
+            Tushyia 2, Tel Aviv-Yafo
+          </p>
+          <div className="w-full aspect-[4/3] bg-neutral-100 rounded-xl" />
         </div>
       </div>
     </section>

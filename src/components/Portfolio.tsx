@@ -3,16 +3,17 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { title: "Jagermeister", category: "Cultural Marketing & Events" },
-  { title: "Zer4U", category: "E-Commerce & Performance" },
-  { title: "Ten Bis", category: "Growth & Digital" },
-  { title: "Vans", category: "Brand Strategy & Social" },
-  { title: "Comme Il Faut", category: "Creative & Lifestyle" },
-  { title: "Benedict", category: "Performance & Analytics" },
+  { title: "Jagermeister", category: "Cultural Marketing & Events", image: null },
+  { title: "Zer4U", category: "E-Commerce & Performance", image: "/images/hero-4-zer4u.jpg" },
+  { title: "Ten Bis", category: "Growth & Digital", image: "/images/portfolio-tenbis.jpg" },
+  { title: "Vans", category: "Brand Strategy & Social", image: null },
+  { title: "Comme Il Faut", category: "Creative & Lifestyle", image: "/images/portfolio-cif.jpg" },
+  { title: "Benedict", category: "Performance & Analytics", image: "/images/portfolio-benedict.jpg" },
 ];
 
 export default function Portfolio() {
@@ -74,14 +75,22 @@ export default function Portfolio() {
               href="#"
               className="portfolio-card flex flex-col gap-3 group"
             >
-              <div className="overflow-hidden rounded-lg aspect-[4/3]">
-                <div
-                  className="portfolio-image w-full h-full bg-neutral-100 flex items-center justify-center"
-                >
-                  <span className="text-neutral-300 text-[80px] font-display font-extrabold">
-                    {project.title.charAt(0)}
-                  </span>
-                </div>
+              <div className="overflow-hidden rounded-lg aspect-[4/3] relative">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="portfolio-image object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <div className="portfolio-image w-full h-full bg-neutral-100 flex items-center justify-center">
+                    <span className="text-neutral-300 text-[80px] font-display font-extrabold">
+                      {project.title.charAt(0)}
+                    </span>
+                  </div>
+                )}
               </div>
               <div>
                 <h3 className="text-[15px] font-bold group-hover:opacity-60 transition-opacity">

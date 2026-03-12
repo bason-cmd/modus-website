@@ -2,8 +2,16 @@
 
 import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 const words = ["strategy", "media", "analytics", "creative", "growth", "culture"];
+
+const heroImages = [
+  { src: "/images/hero-1-kohi.jpg", alt: "KOHI — colorful iced drinks in golden sunlight", client: "KOHI" },
+  { src: "/images/hero-2-karela.jpg", alt: "KARELA — overhead avocado toast editorial", client: "KARELA" },
+  { src: "/images/hero-3-malka.jpg", alt: "Malka — baroque dinner table scene", client: "Malka" },
+  { src: "/images/hero-4-zer4u.jpg", alt: "ZER4U — editorial fashion with roses", client: "ZER4U" },
+];
 
 export default function Hero() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -43,17 +51,17 @@ export default function Hero() {
         "-=0.7"
       );
 
-    // Cards reveal — horizontal slide in
+    // Cards reveal — scale up from slightly smaller
     if (cardsRef.current) {
       const cards = cardsRef.current.children;
-      gsap.set(cards, { x: 80, opacity: 0 });
+      gsap.set(cards, { scale: 0.85, opacity: 0 });
       tl.to(
         cards,
         {
-          x: 0,
+          scale: 1,
           opacity: 1,
-          duration: 0.9,
-          stagger: 0.05,
+          duration: 1,
+          stagger: 0.1,
           ease: "power3.out",
         },
         "-=0.5"
@@ -126,30 +134,28 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Image grid — horizontal scroll strip */}
+        {/* Image showreel — 4 project cards */}
         <div
           ref={cardsRef}
-          className="flex gap-2 md:gap-3 overflow-x-auto -mx-5 px-5 md:-mx-10 md:px-10 pb-2 scrollbar-hide"
+          className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3"
         >
-          {[
-            { label: "Brand Strategy" },
-            { label: "Social Media" },
-            { label: "Performance" },
-            { label: "Analytics" },
-            { label: "Creative" },
-            { label: "Cultural Marketing" },
-            { label: "Events" },
-            { label: "Growth" },
-            { label: "Content" },
-          ].map((item, i) => (
+          {heroImages.map((img, i) => (
             <div
               key={i}
-              className="hero-card flex-none w-[200px] md:w-[260px] aspect-[3/4] rounded-xl bg-neutral-900 flex items-end p-4 overflow-hidden relative"
+              className="hero-card relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer"
             >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, 25vw"
+                priority={i < 2}
+              />
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
-              <span className="relative z-20 text-white/80 text-[11px] font-medium bg-white/10 backdrop-blur-md rounded-full px-3 py-1">
-                {item.label}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10" />
+              <span className="absolute bottom-4 left-4 z-20 text-white/70 text-[11px] font-medium bg-white/10 backdrop-blur-md rounded-full px-3 py-1">
+                {img.client}
               </span>
             </div>
           ))}
